@@ -9,6 +9,7 @@ import VoiceToggle from "./components/VoiceToggle";
 import { useKurama } from "./hooks/useKurama";
 import { SUGGESTION_INTENTS } from "./engine/suggestions";
 import { useReducedMotion } from "../hooks/useReducedMotion";
+import { useScrollLock } from "../hooks/useScrollLock";
 
 type KuramaPanelProps = {
   isOpen: boolean;
@@ -26,6 +27,8 @@ export default function KuramaPanel({ isOpen, onClose }: KuramaPanelProps) {
   const kurama = useKurama(reducedMotion);
   const scrollRef = useRef<HTMLDivElement>(null);
   const lastAnimatedId = useRef<string | null>(null);
+
+  useScrollLock(isOpen);
 
   useEffect(() => {
     const el = scrollRef.current;

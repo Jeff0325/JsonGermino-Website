@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ExternalLink } from "lucide-react";
 import { GithubGlyph } from "./BrandIcons";
 import { projectCategoryLabels, type Project } from "../../data/content";
+import { useScrollLock } from "../../hooks/useScrollLock";
 
 type ProjectModalProps = {
   project: Project | null;
@@ -15,6 +16,8 @@ const accentText: Record<string, string> = {
 };
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
+  useScrollLock(!!project);
+
   return (
     <AnimatePresence>
       {project && (
@@ -37,7 +40,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.97 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-line bg-card p-8 sm:p-10"
+            className="relative max-h-[85dvh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-line bg-card p-8 sm:p-10"
           >
             <button
               onClick={onClose}

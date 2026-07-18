@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import MagneticButton from "../ui/MagneticButton";
 import { cn } from "../../lib/utils";
+import { useViewportPin } from "../../hooks/useViewportInsets";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const headerRef = useViewportPin<HTMLElement>("top", 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -17,8 +19,9 @@ export default function Navbar() {
 
   return (
     <header
+      ref={headerRef}
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        "fixed inset-x-0 z-50 transition-all duration-500",
         scrolled ? "border-b border-line bg-void/80 backdrop-blur-xl" : "border-b border-transparent"
       )}
     >

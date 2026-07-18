@@ -71,7 +71,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-void px-6 pt-28 sm:px-10"
+      className="relative flex min-h-dvh flex-col justify-center overflow-hidden bg-void px-6 pt-28 sm:px-10"
     >
       <GradientField variant="hero" />
 
