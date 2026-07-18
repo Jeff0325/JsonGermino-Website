@@ -1,0 +1,18 @@
+[
+  {
+    "id": "jyosna",
+    "company": "Jyosna Inc.",
+    "role": "Web Developer & Cloud Engineer",
+    "period": "2022 — Present",
+    "description": "Developing enterprise web applications with C# .NET and ASP.NET Web Forms, backed by SQL Server and deployed across Azure. Responsible for API integration, security, networking, disaster recovery, and performance tuning — plus UI design in Figma and production graphics in Photoshop and Canva.",
+    "tags": ["C# .NET", "ASP.NET", "SQL Server", "Azure", "Security", "Figma"]
+  },
+  {
+    "id": "holycross",
+    "company": "Holy Cross College",
+    "role": "IT Support Intern",
+    "period": "Earlier",
+    "description": "Installed and maintained hardware and software, managed databases, resolved technical issues, and ran preventive maintenance across the campus network.",
+    "tags": ["Hardware", "Databases", "Troubleshooting", "Maintenance"]
+  }
+]

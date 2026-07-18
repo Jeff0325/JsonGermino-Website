@@ -1,0 +1,15 @@
+{
+  "headline": "Web developer, Azure cloud engineer, and automation builder who connects interfaces people enjoy using with the invisible systems that keep them running.",
+  "paragraphs": [
+    "Jefferson started out fixing hardware and chasing down network faults as an IT intern — the kind of work that teaches you how systems actually break.",
+    "That instinct followed me into web development, then into Microsoft Azure, where I learned to design infrastructure that stays up when it matters.",
+    "Now I spend most of my time connecting the two worlds: building interfaces people enjoy using, and wiring the invisible automation behind them — so the busywork disappears and the software just works."
+  ],
+  "stats": [
+    { "label": "Years of Experience", "value": "3+" },
+    { "label": "Projects Completed", "value": "24+" },
+    { "label": "Cloud Deployments", "value": "40+" },
+    { "label": "Workflow Automations", "value": "18+" },
+    { "label": "Technologies Used", "value": "30+" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Jefferson Germino",
+  "location": "Mandaluyong, Philippines",
+  "email": "jsongermino@gmail.com",
+  "phone": "0991-665-3756",
+  "roles": [
+    "Web Developer",
+    "Cloud Engineer",
+    "Automation Engineer",
+    "Azure Engineer",
+    "AI Workflow Builder",
+    "Modern Software Engineer"
+  ],
+  "tagline": "I build AI-powered workflow systems that replace repetitive work with intelligent automation.",
+  "socials": {
+    "github": "https://github.com/",
+    "linkedin": "https://linkedin.com/"
+  }
+}

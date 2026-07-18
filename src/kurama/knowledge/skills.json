@@ -1,0 +1,48 @@
+[
+  {
+    "id": "frontend",
+    "title": "Frontend",
+    "description": "Interfaces built for clarity and motion.",
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Angular", "ASP.NET"]
+  },
+  {
+    "id": "backend",
+    "title": "Backend",
+    "description": "Reliable services and data layers.",
+    "skills": ["C#", "ASP.NET", "Web API", "PHP", "MS SQL", "MySQL"]
+  },
+  {
+    "id": "cloud",
+    "title": "Cloud",
+    "description": "Infrastructure that scales and recovers.",
+    "skills": [
+      "Microsoft Azure",
+      "Virtual Machines",
+      "Networking",
+      "Storage",
+      "Load Balancer",
+      "WAF",
+      "Disaster Recovery",
+      "Monitoring",
+      "Log Analytics"
+    ]
+  },
+  {
+    "id": "automation",
+    "title": "Automation",
+    "description": "Systems that run themselves.",
+    "skills": ["n8n", "Make", "OpenAI", "Claude", "Ollama", "APIs", "Webhooks", "CRM", "Gmail", "Telegram", "Google Sheets"]
+  },
+  {
+    "id": "devops",
+    "title": "DevOps",
+    "description": "Shipping without friction.",
+    "skills": ["Docker", "Git", "Bitbucket", "PowerShell", "CI/CD"]
+  },
+  {
+    "id": "uiux",
+    "title": "UI / UX",
+    "description": "Design that earns the engineering.",
+    "skills": ["Figma", "Canva"]
+  }
+]
