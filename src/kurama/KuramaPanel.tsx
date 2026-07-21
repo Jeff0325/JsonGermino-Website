@@ -31,9 +31,13 @@ export default function KuramaPanel({ isOpen, onClose }: KuramaPanelProps) {
   useScrollLock(isOpen);
 
   useEffect(() => {
+    // Also keyed on isOpen — reopening via the chat-head bubble doesn't
+    // change messages/phase (the conversation is already loaded), so
+    // without it the panel would reopen wherever it was scrolled to
+    // before, forcing a manual scroll down to see the latest message.
     const el = scrollRef.current;
     if (el) el.scrollTop = el.scrollHeight;
-  }, [kurama.messages, kurama.phase]);
+  }, [kurama.messages, kurama.phase, isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;

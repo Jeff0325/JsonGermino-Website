@@ -4,6 +4,12 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+// A real mobile browser's address bar collapsing/expanding during scroll
+// fires genuine `resize` events. ScrollTrigger recalculates every trigger's
+// position on resize by default, and that recalculation is what was making
+// the whole page appear to "resize" while scrolling on an actual phone —
+// this is GSAP's own documented fix for exactly that interaction.
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 export function useLenis(enabled: boolean = true) {
   useEffect(() => {
