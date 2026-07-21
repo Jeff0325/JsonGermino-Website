@@ -14,7 +14,13 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 will-change-transform transition-all duration-500",
-        scrolled ? "border-b border-line bg-void/80 backdrop-blur-xl" : "border-b border-transparent"
+        scrolled
+          ? // backdrop-blur is dropped on touch: it has to keep re-sampling the
+            // scrolling content behind a fixed element every frame, which is
+            // heavy enough on Android GPUs to make the whole bar lag behind
+            // the scroll gesture. bg opacity goes up on touch to compensate.
+            "border-b border-line bg-void/80 backdrop-blur-xl [@media(pointer:coarse)]:bg-void/95 [@media(pointer:coarse)]:backdrop-blur-none"
+          : "border-b border-transparent"
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 sm:px-10">

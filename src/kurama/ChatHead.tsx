@@ -14,12 +14,12 @@ type ChatHeadProps = {
 // browser chrome, but that introduced more visible jitter than it removed.
 // Native `position: fixed` is compositor-handled and smoother in practice.
 //
-// will-change-transform forces this onto its own GPU layer. Without it,
-// real Android Chrome was seen lagging fixed elements behind the page during
-// scroll (visibly dragged along with content, snapping to bottom-right only
-// once scrolling stopped) whenever GSAP's ScrollTrigger scroll listeners
-// were busy on the main thread — the browser fell back to repainting the
-// "fixed" layer instead of letting the compositor pin it independently.
+// will-change-transform forces this onto its own GPU layer, and backdrop-blur
+// is dropped on touch — both target the same real-device symptom: this bubble
+// visibly dragging along with page content during scroll and only snapping to
+// bottom-right once scrolling stopped. The blur was the bigger culprit —
+// re-sampling scrolling content behind a fixed element every frame is heavy
+// enough on Android GPUs to make it lag regardless of layer promotion.
 export default function ChatHead({ onClick }: ChatHeadProps) {
   return (
     <motion.button
@@ -31,7 +31,7 @@ export default function ChatHead({ onClick }: ChatHeadProps) {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.6, y: 20 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed bottom-6 right-6 z-[90] flex h-14 w-14 will-change-transform items-center justify-center rounded-full border border-line bg-card/80 text-cyan shadow-[0_0_30px_-5px_rgba(34,211,238,0.5)] backdrop-blur-xl"
+      className="fixed bottom-6 right-6 z-[90] flex h-14 w-14 will-change-transform items-center justify-center rounded-full border border-line bg-card/80 text-cyan shadow-[0_0_30px_-5px_rgba(34,211,238,0.5)] backdrop-blur-xl [@media(pointer:coarse)]:bg-card/95 [@media(pointer:coarse)]:backdrop-blur-none"
     >
       <motion.span
         className="absolute inset-0 rounded-full border border-cyan/40"
