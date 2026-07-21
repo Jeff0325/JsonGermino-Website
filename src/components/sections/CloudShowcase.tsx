@@ -22,7 +22,7 @@ export default function CloudShowcase() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id="cloud" className="relative overflow-hidden bg-secondary px-6 py-32 sm:px-10">
+    <section id="cloud" className="relative bg-secondary px-6 py-32 sm:px-10">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="05 · Azure Cloud Engineering"
