@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        "fixed inset-x-0 top-0 z-50 will-change-transform transition-all duration-500",
         scrolled ? "border-b border-line bg-void/80 backdrop-blur-xl" : "border-b border-transparent"
       )}
     >
