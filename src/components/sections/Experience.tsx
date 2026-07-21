@@ -14,7 +14,7 @@ export default function Experience() {
   const lineHeight = useSpring(scrollYProgress, { stiffness: 80, damping: 24 });
 
   return (
-    <section id="experience" className="relative bg-secondary px-6 py-32 sm:px-10">
+    <section id="experience" className="relative overflow-hidden bg-secondary px-6 py-32 sm:px-10">
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="03 · Experience"
